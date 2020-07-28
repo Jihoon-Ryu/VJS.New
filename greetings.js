@@ -10,7 +10,7 @@ const USER_LS = "currentUser",
 // 개요
 
 function loadName() {
-  const currentUser = localStorage.getItem(USER_LS);
+  const currentUser = localStorage.getItem("currentUser");
   if (currentUser === null) {
     askForName();
   } else {
@@ -34,21 +34,21 @@ function askForName() {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
-  paintGreeting(currentValue);
+  paintGreeting(input.value);
 
   // (1-3)입력된 이름을 localStorage에 저장한다.
-  saveName(currentValue);
+  saveName(input.value);
 }
 
-function saveName(text) {
-  localStorage.setItem(USER_LS, text);
+function saveName(name) {
+  localStorage.setItem("currentUser", name);
 }
 
 // (2)등록이 되어 있으면 환영문자 띄우기
-function paintGreeting(text) {
+function paintGreeting(name) {
   form.classList.remove(SHOWING_ON);
   greeting.classList.add(SHOWING_ON);
-  greeting.innerText = `hello ${text}`;
+  greeting.innerText = `hello ${name}`;
 }
 /* form입력창을 안보이게 하고
 greeting h4를 보이게 한다
