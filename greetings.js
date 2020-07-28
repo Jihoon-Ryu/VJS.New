@@ -35,10 +35,11 @@ function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
   paintGreeting(currentValue);
+
+  // (1-3)입력된 이름을 localStorage에 저장한다.
   saveName(currentValue);
 }
 
-// (1-3)입력된 이름을 localStorage에 저장한다.
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
 }
