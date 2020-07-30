@@ -23,3 +23,47 @@ h1 {
 .showing {
   display: block;
 }
+
+
+
+.js-clock {
+  position: absolute;
+  top: 10px;
+  left:10px;
+}
+.js-form {
+  position : absolute;
+  top: 80px;
+  left:10px;
+}
+.js-greetings{
+  position : absolute;
+  top: 60px;
+  left:10px;
+}
+.js-toDoForm {
+  position: absolute;
+  top: 110px;
+  left:10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.bgImage {
+  position:: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1.5s linear; 
+}
+

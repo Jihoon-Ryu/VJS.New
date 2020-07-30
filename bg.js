@@ -1,15 +1,21 @@
 const body = document.querySelector("body");
 
-const NUM_image = 3;
+const IMG_NUMBER = 3;
 
 function paintImage(randomNumber012) {
+  //이미지 소환
   const image = new Image();
   image.src = `VJS.images/${randomNumber012 + 1}.jpg`;
-  body.appendChild(image);
+  //이미지크기조절 with CSS
+  image.classList.add("bgImage");
+  // ?
+  body.prepend(image);
+  //내용물을 이미지 안에 넣기
+  image.appendChild(".js-clock", ".js-form", ".js-greetings", ".js-toDoForm");
 }
 
 function genRandom() {
-  const number = Math.floor(Math.random() * NUM_image);
+  const number = Math.floor(Math.random() * IMG_NUMBER);
   //0 1 2
   return number;
 }
