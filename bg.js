@@ -6,9 +6,9 @@ function paintImage(randomNumber012) {
   //이미지 소환
   const image = new Image();
   image.src = `VJS.images/${randomNumber012 + 1}.jpg`;
-  //이미지크기조절 with CSS
+  //이미지 크기 조절 CSS
   image.classList.add("bgImage");
-  // ?
+  //?
   body.prepend(image);
   //내용물을 이미지 안에 넣기
   image.appendChild(".js-clock", ".js-form", ".js-greetings", ".js-toDoForm");
